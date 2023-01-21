@@ -15,11 +15,14 @@
     <h1> ABOUT </h1>
 </header>
 
-<div id="maindiv">
-
-    <div class="box" > <a href="../index.html">HOME</a></div> <!-- a= collegamento ipertestuale -->
-
-</div>
+<nav>
+    <ul>
+        <li><a href="../index.html">HOME</a></li>
+        <li class="selected"><a href="about.html">ABOUT</a></li>
+        <li><a href="projects.html">PROJECTS</a></li>
+        <li><a href="contacts.html">CONTACTS</a></li>
+    </ul>
+</nav>
 
 <p id="demo"></p>
 
@@ -39,6 +42,12 @@
         document.getElementById("demo").innerHTML = "Complimenti!" ; <!-- cast? es home-->
     }
 </script>
+
+<footer>
+    <p>
+        Copyright © 2022 <a href="https://github.com/LorenzoSarti22" target="_blank">Lorenzo Sarti</a>
+    </p>
+</footer>
 
 </body>
 </html>

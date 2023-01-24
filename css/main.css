@@ -98,3 +98,14 @@ footer a {
     background-color: lightgray;
     text-align: left;
 }
+
+aside {
+    background-color: lightgray;
+    position: fixed;
+    bottom: 50px;
+    padding-top:30px;
+    padding-bottom: 30px;
+    width: 100%;
+    text-align: center;
+
+}

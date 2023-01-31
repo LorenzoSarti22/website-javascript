@@ -7,6 +7,7 @@ body {
     border: 3px solid white;
     height: 100px;
     width: 100px;
+    background-size: 100px;
 }
 
 .main-panel {

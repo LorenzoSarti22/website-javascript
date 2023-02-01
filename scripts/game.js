@@ -9,6 +9,7 @@ class Game {
     #winner
     #currentPlayer
     #gameOver
+    #cellCount
 
     constructor(size) {
         this.#board = new Board(size);
@@ -16,11 +17,16 @@ class Game {
         this.#player2 = new Player(CIRCLE);
         this.#currentPlayer = this.#player1;
         this.#gameOver = false;
+        this.#cellCount = size*size;
     }
 
     getCurrentPlayer() {
         return this.#currentPlayer;
     }
+    getWinner() {
+        return this.#winner;
+    }
+
     isGameOver() {
         return this.#gameOver;
     }
@@ -35,11 +41,14 @@ class Game {
     }
 
     play(i, j) {
+
         if (this.#board.isCellEmpty(i,j) && !this.#gameOver) {
             this.#board.makeMove(i, j, this.#currentPlayer.getSymbol());
+            this.#cellCount--;
             if (this.#board.checkWinner(i, j, this.#currentPlayer.getSymbol())) {
                 this.#winner = this.#currentPlayer;
                 this.#gameOver = true;
+
             } else {
                 if (this.#currentPlayer == this.#player1) {
                     this.#currentPlayer = this.#player2;
@@ -48,8 +57,10 @@ class Game {
                 }
             }
         }
+        if (this.#cellCount==0 ) {
+            this.#gameOver=true;
+        }
     }
-
 }
 
 

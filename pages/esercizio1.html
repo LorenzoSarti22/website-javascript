@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Lorenzo Sarti">
+    <meta name="description" content="...">
+
+    <title> ABOUT </title>
+
+    <link href="../css/main.css" rel="stylesheet"/> <!-- foglio di stile -->
+    <script src="../scripts/controllerEs1.js"> </script>
+
+</head>
+
+<body>
+<header>
+    <h1> ES1 </h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="../index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="projects.html">PROJECTS</a></li>
+        <li><a href="contacts.html">CONTACTS</a></li>
+        <li><a href="tictactoe.html">TICTACTOE</a></li>
+        <li class="selected"><a href="esercizio1.html">ESERCIZIO 1</a></li>
+    </ul>
+</nav>
+
+<main>
+    <div>
+        <form>
+            <label>NOME:</label><br>
+            <input type="text" id="name"><br>
+            <label>ETA':</label><br>
+            <input type="number" id="age"><br><br>
+            <button type="button" id="button-invia" onclick="prendiValori()">INVIA</button>
+        </form>
+    </div>
+    <div>
+        <table id="tabella-info">
+            <tr>
+                <th>UTENTE</th>
+                <th>NOME</th>
+                <th>ETA'</th>
+            </tr>
+        </table>
+    </div>
+</main>
+<footer>
+    <p>
+        Copyright © 2022 <a href="https://github.com/LorenzoSarti22" target="_blank">Lorenzo Sarti</a>
+    </p>
+</footer>
+
+</body>
+</html>

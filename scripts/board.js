@@ -23,7 +23,7 @@ class Board {
         return isEmpty;
     }
     checkWinner (i, j, symbol) {
-        return this.checkColumn(symbol, j) || this.checkDiagonalOne() || this.checkDiagonalTwo() || this.checkRow();
+        return this.checkColumn(symbol, j) || this.checkDiagonalOne(symbol) || this.checkDiagonalTwo(symbol) || this.checkRow(symbol,i);
     }
 
     checkRow(symbol, i) {

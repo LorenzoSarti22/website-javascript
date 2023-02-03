@@ -1,6 +1,15 @@
 
 let game = new Game(3);
 
+/**
+ * stiamo regitsrando un listener su un elemento di tipo mouse over
+ *
+ * @param {element} x cella
+ * @param {i} n indice di riga
+ * @param {j} n indice di colonna
+ * @return {} x
+ */
+
 function addEventListenerMouseOnOver(element, i, j) {
     element.addEventListener("mouseover",_ => {
         if (!game.isGameOver() && game.getBoard().isCellEmpty(i,j)) {
@@ -8,17 +17,6 @@ function addEventListenerMouseOnOver(element, i, j) {
         }
     })
 }
-
-/**
- * Returns x raised to the n-th power.
-
- 11
-
- *
- * @param {number} x The number to raise.
- * @param {number} n The power, must be a natural number.
- * @return {number} x raised to the n-th power.
- */
 
 function addEventListenerMouseOut(element, i, j) {
     element.addEventListener("mouseout",_ => {
